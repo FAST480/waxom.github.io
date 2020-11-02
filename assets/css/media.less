@@ -1,0 +1,358 @@
+@media(max-width: 1140px){
+	.header__burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 27;
+		span{
+			position: absolute;
+			background-color: #fff;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+			transition: .3s;
+		}
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			background-color: #fff;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: .3s;
+		}
+		&:before{
+			top: 0;
+		}
+		&:after{
+			bottom: 0;
+		}
+	}
+	.header__burger.active{
+		span{
+			transform: scale(0);
+		}
+		&:before{
+			transform: rotate(45deg);
+			top: 9px;
+		}
+		&:after{
+			transform: rotate(-45deg);
+			bottom: 9px;
+		}
+	}
+	.nav__menu{
+		position: fixed;
+		top: 0;
+		right: -100%;
+		width: 40%;
+		height: 100%;
+		background-color: #191919;
+		z-index: 24;
+		display: block;
+		margin-right: 0;
+		padding: 100px 0 0 80px;
+		transition: .3s;
+		li{
+			margin: 25px 0;
+			a{
+				display: block;
+				text-transform: uppercase;
+				font-size: 18px;
+			}
+		}
+	}
+	.nav__menu.active{
+		right: 0;
+		top: 0;
+	}
+	.nav__btns{
+		margin-right: 5%;
+		z-index: 27;
+	}
+}
+@media(max-width: 1070px)
+{
+	//--------------------MOBILE--------------------
+	.mobile__list{
+		margin: 0px 0px 0px 40px;
+		li{
+			font-size: 15px;
+		}
+	}
+	//--------------------POSTS--------------------
+	.posts__item{
+		.item__infoblock{
+			.item__title{
+				font-size: 18px;
+			}
+			.item__text{
+				font-size: 12px;
+			}
+			.item__more{
+				font-size: 12px;
+			}
+		}
+	}
+	//--------------------PARTNERS--------------------
+	.partners__body{
+		justify-content: space-around;
+	}
+	.partners__logo{
+		flex: 0 1 14%;
+	}
+	//--------------------TOPFOOTER--------------------
+	.topfooter__body{
+		padding: 0 80px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
+	}
+	.toopfooter__column{
+		flex: 0 0 35%;
+	}
+}
+@media(max-width: 970px){
+	//--------------------PROJECTS--------------------
+	.tabs__item{
+		.item__title{
+			font-size: 16px;
+		}
+		.item__tag{
+			font-size: 12px;
+		}
+	}
+	//--------------------POSTS--------------------
+	.posts__item{
+		.item__infoblock{
+			padding: 10px 30px;
+			.item__text{
+				margin: 5px 0;
+			}
+		}
+	}
+	//--------------------NUMBERS--------------------
+	.numbers__item{
+		.item__count{
+			font-size: 36px;
+		}
+	}
+	//--------------------PARTNERS--------------------
+	.partners{
+		padding: 70px 0;
+	}
+}
+@media(max-width: 896px){
+	//--------------------PROJECTS--------------------
+	.tabs{
+		grid-gap: 0;
+		li{
+			a{
+				font-size: 12px;
+			}
+		}
+	}
+	.projects__tabs__content{
+		grid-gap: 15px;
+	}
+	//--------------------MOBILE--------------------
+	.mobile__list{
+		li:before{
+			margin-right: 10px;
+		}
+	}
+}
+@media(max-width: 850px){
+	//--------------------MOBILE--------------------
+	.mobile__subtitle{
+		margin: 15px 0;
+		font-size: 14px;
+	}
+	.mobile__list{
+		margin: 0 0 0 25px;
+		li{
+			font-size: 14px;
+		}
+	}
+}
+@media(max-width: 768px){
+	//--------------------SERVICES--------------------
+	.services__body{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.services__item:after{
+		display: none;
+	}
+	//--------------------HEADER--------------------
+	.nav__menu{
+		padding: 80px 0 0 60px;
+		li{
+			a{
+				font-size: 16px;
+			}
+		}
+	}
+	//--------------------PROJECTS--------------------
+	.tabs{
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: center;
+		li:nth-child(4){
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+	}
+	.projects__tabs__content{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	//--------------------POSTS--------------------
+	.posts__flex{
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+	}
+	.posts__content{
+		flex-direction: column;
+		margin: 0;
+	}
+	.posts__item{
+		max-width: 60%;
+		min-height: 0;
+		&:nth-child(2),
+		&:last-child{
+			display: none;
+		}
+	}
+	.posts__arrows {
+		flex-direction: column;
+		margin: 100px 60px 0 0;
+		.arrow__left,
+		.arrow__right{
+			font-size: 54px;
+			margin: 0;
+		}
+		.arrow__left {
+			transform: rotate(90deg);
+		}
+		.arrow__right {
+			margin: 10px 0 0 0;
+			transform: rotate(90deg);
+		}
+	}
+	//--------------------FOOTER--------------------
+	.footer{
+		padding: 25px 0;
+	}
+	.footer__body{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+@media(max-width: 740px){
+	//--------------------MOBILE--------------------
+	.mobile{
+		padding: 40px 0px 40px 0px;
+	}
+	.mobile__image{
+		display: none;
+	}
+	.mobile__text{
+		flex: 0 0 90%;
+	}
+	.mobile__list{
+		margin: 0;
+		li:before{
+			font-size: 14px;
+			padding: 1px 8px;
+		}
+	}
+}
+@media(max-width: 600px){
+	//--------------------HEADER--------------------
+	.slider__text {
+		color: #fff;
+		h3{
+			font-size: 25px;	
+		}
+		h1{
+			font-size: 42px;
+			line-height: 52px;
+		}
+		p{
+			font-size: 16px;
+			line-height: 24px;
+			margin: 5px 0px 0px 0px;
+		}
+	}
+	.slider__btn {
+		margin: 35px 0px 0px 0px;
+	}
+	//--------------------NUMBERS--------------------
+	.numbers__body{
+		flex-wrap: wrap;
+	}
+	.numbers__item{
+		flex: 0 0 30%;
+		&:after{
+			display: none;
+		}
+		&:nth-child(4),
+		&:last-child{
+			margin: 30px 0 0 0;
+		}
+	}
+	//--------------------TOPFOOTER--------------------
+	.topfooter{
+		display: none;
+	}
+}
+@media(max-width: 530px){
+	.textbox{
+		display: none;
+	}
+}
+@media(max-width: 425px)
+{
+	//--------------------HEADER--------------------
+	body.lock{
+		overflow: hidden;
+	}
+	.nav__logo{
+		width: 120px;
+	}
+	.nav__menu{
+		top: -100%;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+	//--------------------VIDEO--------------------
+	.video{
+		padding: 100px 0;
+	}
+	//--------------------POSTS--------------------
+	.posts__item{
+		.item__image{
+			.item__date{
+				top: 10px;
+				left: 10px;
+			}
+		}
+		.item__infoblock{
+			padding: 10px;
+		}
+	}
+	//--------------------FOOTER--------------------
+	.footer__body{
+		font-size: 11px;
+	}
+}
+@media(max-width: 375px)
+{
+	//--------------------FOOTER--------------------
+	.footer__body{
+		font-size: 10px;
+	}
+}
